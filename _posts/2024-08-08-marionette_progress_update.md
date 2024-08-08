@@ -160,4 +160,4 @@ To wrap up this post, I have included an image of the Marionette text widget wit
     - [ ] Only lex the content that has changed.
     - [ ] Port the widget to rust to decrease lexing latency.
 
-![Marionette text widget syntax highlighting example](images/2024-08-08-marionette_progress_update/marionette_app_TycBOan2E1.png)
+![Marionette text widget syntax highlighting example](https://matthewg-rev.github.io/images/2024-08-08-marionette_progress_update/marionette_app_TycBOan2E1.png)
