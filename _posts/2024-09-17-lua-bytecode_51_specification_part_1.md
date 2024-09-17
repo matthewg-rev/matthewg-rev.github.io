@@ -1,4 +1,4 @@
-## Lua Bytecode 5.1 Specification
+## Lua Bytecode 5.1 Specification Part 1.
 
 This blog post will be dedicated to my self-documentation about the Lua 5.1 bytecode specification. This post is written with accordance to the Lua 5.1 source code for the files:
 - ldump.c
@@ -48,3 +48,5 @@ void luaU_header (char* h)
  *h++=(char)(((lua_Number)0.5)==0);             /* is lua_Number integral? */
 }
 ```
+
+Part 2 will cover how `Proto*`'s are encoded for lua compiled files, including ``Instruction``'s, ``Constant``'s, and ``Debug`` which should wrap up the bytecode specification. If I decide to document the entirety of all the lua 5.1 virtual machine then I would probably end up writing a paper on it. 
