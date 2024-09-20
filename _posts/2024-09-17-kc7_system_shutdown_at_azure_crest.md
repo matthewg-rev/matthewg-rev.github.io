@@ -8,9 +8,9 @@ The System Shutdown at Azure Crest Cyber Security Challenge is a challenge that 
 
 ## Analysis
 Following the initial email from your boss, you quickly trace the security alert and find the first malicious file alert. This file alert when investigated leads to discovering a secondary file for the malware. Then investigating further you find a chain of commands that would run on the target machine when either of these files are downloaded. From my observation of the commands ran on the computer the malware seems to have three stages:
-- Stage 1: Determine the user's name and host machine name (if this isn't the target machine the malware stops here)
-- Stage 2: Download autodesk and an autodesk automation script as well as a batch file for encryption of database files.
-- Stage 3: Execute dbhunter to discover all the databases and back them up to a .7z file with a password upload to a remote server. Then execute the autodesk automation script and then the batch file to encrypt the database files.
+- Stage 1: determine the username and host machine name (if this isn't the target machine the malware stops here)
+- Stage 2: download autodesk, an autodesk automation script, batch file for encryption of database files.
+- Stage 3: execute dbhunter to discover all the databases and back them up to a .7z file with a password, upload to a remote server, execute the autodesk automation script, run a batch file to encrypt the database files.
 
 The ransomware attack described here was very targetted with the threat actor conducting research on the hospital before hand to discover what type of system they were using and who the key employee was to target. The ransomware attack also aimed to avoid detection by not activating on every machine but only the target of the attack allowing the threat to go undetected for a longer period of time.
 
