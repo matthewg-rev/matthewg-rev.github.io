@@ -63,7 +63,6 @@ InboundNetworkEvents
 We find 4 records of inbound network traffic from the ip address `93.142.203.80`. The `user_agent` columns for each record is `Opera/9.63.(Windows CE; lb-LU) Presto/2.9.161 Version/12.00`, in which we find our answer for Question 8 which is `12.00`. 
 
 # 9/18/2024
-## Question 9 (300pts)
 
 ## Question 10 (300pts)
 This question is asking us to find the extension that is used for encrypted databases upon the breach of the main server. This can be found by using the following query:
@@ -130,3 +129,16 @@ Searching through this traffic for `"New_Healthcare_Protocols.docm"` or `"Pediat
 
 ## Question 17 (200pts)
 This question is asking us which domain the malicious url in Question 16 was attempting to spoof, which can be found by referencing the KC7 Training Guide: `https://kc7cyber.com/guide/184` where we will find under the list of key partners for Azure Crest Hospital, the closest match is a partner with the domain: `healthrecordsystems.tech` which is our answer for Question 17.
+
+# 9/19/2024
+
+## Question 9 (300pts)
+In order to find out what type of system Azure Crest Hospital was using we need to use the `InboundNetworkEvents` to search for a certain keyword, from this question it looks like we are searching for a type of system so let's do exactly that!
+```KQL
+InboundNetworkEvents
+| where url contains "system"
+````
+In the following records that show up we see several mentions of an `ERP` system. Entering this as our answer to KC7 will give us the final 300pts. 
+
+# Conclusion
+The System Shutdown at Azure Crest hospital is definitely an inviting challenge for those who have no experience with Cyber Security investigation. I believe that this challenge will help those who are trying to learn how to think outside of the box when it comes to following a trail of evidence left behind by cyber criminals and I was pleasantly surprised with the amount of effort that was put into this challenge. KC7 challenges typically come with a lot of data that makes the challenges feel realistic to be exploring and sifting around and I felt like this challenge also reflected that.
